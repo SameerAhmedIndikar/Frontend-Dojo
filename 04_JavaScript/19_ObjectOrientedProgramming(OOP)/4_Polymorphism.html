@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polymorphism in JavaScript</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Polymorphism in JavaScript</h1>
+    <p>Polymorphism is the ability of different objects to respond to the same
+      method call in different ways. In JavaScript, polymorphism is achieved
+      through method overriding, where a subclass provides a specific
+      implementation of a method that is already defined in its superclass.</p>
+
+    <h2>Examples of Polymorphism</h2>
+    <p>Open the browser console to see the output of the following polymorphism
+      examples.</p>
+
+    <script>
+    // 1. Method Overriding
+    class Animal {
+      speak() {
+        console.log('Animal makes a sound.');
+      }
+    }
+
+    class Dog extends Animal {
+      speak() {
+        console.log('Dog barks.');
+      }
+    }
+
+    class Cat extends Animal {
+      speak() {
+        console.log('Cat meows.');
+      }
+    }
+
+    const animals = [new Animal(), new Dog(), new Cat()];
+    console.log('Method Overriding:');
+    animals.forEach(animal => animal.speak());
+    // Output:
+    // Animal makes a sound.
+    // Dog barks.
+    // Cat meows.
+
+  
+
+    // 2. Method Overloading (Simulated)
+    // Method overloading is a feature where multiple methods can have the same name but different parameters. In JavaScript, this is not supported natively because functions can accept a variable number of arguments. However, we can simulate it by checking the arguments inside the function.
+    // JavaScript does not support method overloading natively because it allows functions to accept any number of arguments.
+    // However, we can simulate it by checking the number or types of arguments.
+function greet(name){
+  console.log(`Hello, ${name}!`);
+}
+greet("Ali"); // Hello, Ali!
+greet(); // Hello, undefined!
+greet("Ajay", "Bob"); // Hello, Ajay!
+
+    // Explanation: Method overloading is not possible in JavaScript because functions can accept variable arguments.
+    // Unlike languages like Java or C++, JS doesn't check the number or types of parameters at compile time.
+  </script>
+  </body>
+</html>

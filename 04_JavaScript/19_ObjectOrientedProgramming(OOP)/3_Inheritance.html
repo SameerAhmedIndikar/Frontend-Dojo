@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inheritance in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Inheritance in JavaScript</h1>
+  <p>Inheritance is a mechanism where one class can inherit properties and methods from another class. In JavaScript, inheritance is achieved through prototypes. With ES6 classes, it becomes more straightforward using the `extends` keyword.</p>
+
+  <h2>Examples of Inheritance</h2>
+  <p>Open the browser console to see the output of the following inheritance examples.</p>
+
+  <script>
+    // 1. Basic Inheritance
+    class Animal {
+      sound() {
+        console.log("Some Animal Sound")
+      }
+    }
+    class Dog extends Animal{
+      bark() { 
+        console.log("Woof Woof 🐕");
+      }
+    }
+    class Cat extends Animal{
+      meowing(){
+        console.log("Meow Meow 🐈")
+      }
+    }
+
+    const d  = new Dog();
+    d.sound();
+    d.bark();
+    // Create Cat object here
+    // 2. Method Overriding
+  
+    class Car{
+      start(){
+        console.log("Car is starting");
+      }
+    }
+    class ElectricCar extends Car{
+      start(){
+        console.log("Electric Car is starting silently");
+      }
+    }
+
+    const myCar = new ElectricCar();
+    console.log("\nMethod Overriding:");
+    myCar.start(); // Electric Car is starting silently
+
+
+
+
+
+    // 3. Multilevel Inheritance
+    class LivingBeing{
+      breathe(){
+        console.log("😤 Breathing!!")
+      }
+    }
+    class Human extends LivingBeing{
+      think(){
+        console.log("🤔 Thinking!!");
+      }
+    }
+    class Programmer extends Human {
+      code(){
+        console.log("👩‍💻 Coding!!")
+      }
+    }
+
+    const sam =  new Programmer();
+    sam.breathe();
+    sam.think();
+    sam.code();
+    
+  </script>
+</body>
+</html>

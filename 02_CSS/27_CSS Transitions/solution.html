@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Transitions Example</title>
+  <style>
+    /* CSS Transition properties */
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: #3498db;
+      transition-property: background-color, transform;
+      transition-duration: 0.5s, 0.7s;
+      transition-timing-function: ease-in-out, linear;
+      transition-delay: 0s, 0.2s;
+    
+      /* Transition in one line 
+      Transition shorthand: property | duration | timing-function | delay 
+transition: background-color 0.5s ease-in-out 0s, transform 0.7s linear 0.2s; */
+
+      margin: 50px;
+      cursor: pointer;
+    }
+
+    .box:hover {
+      background-color: #e74c3c;
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS Transition Example</h2>
+  <p>Hover over the box to see the transition effect.</p>
+  <div class="box"></div>
+</body>
+</html>

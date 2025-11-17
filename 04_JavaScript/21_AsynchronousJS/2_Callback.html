@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Callbacks in Asynchronous JavaScript</title>
+        <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgb(255, 0, 0);
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #170277;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #4a90e2;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .callback-hell {
+            background: #ffe6e6;
+            border-left: 5px solid #e74c3c;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Callbacks in Asynchronous JavaScript</h1>
+
+            <div class="section">
+                <h2>What is a Callback?</h2>
+                <p>A callback is a function passed into another function as an
+                    argument, which is then invoked inside the outer function to
+                    complete some kind of routine or action. Callbacks are a
+                    fundamental way to handle asynchronous operations in
+                    JavaScript.</p>
+                <p>They allow you to run code after an asynchronous task has
+                    completed, such as after fetching data or waiting for a
+                    timer.</p>
+            </div>
+
+            <div class="section">
+                <h2>Basic Callback Function Example</h2>
+                <pre>
+                <code>
+                    function greet(name, callback) {
+                        console.log('Hello ' + name);
+                        callback();
+                    }
+                    function sayGoodbye() {
+                        console.log('Goodbye!');
+                    }
+                    greet('Sameer', sayGoodbye);
+                </code>
+            </pre>
+                <p>In this example, the <code>greet</code> function takes a name
+                    and a callback function as arguments. After greeting the
+                    person, it calls the <code>sayGoodbye</code> function.</p>
+            </div>
+
+            <div class="section">
+                <h2>Callback Hell Example</h2>
+                <pre>
+                <code>
+                    function task(name, callback){
+                        setTimeout(()=>{
+                            console.log(name);
+                            callback();
+                        }, 1000);
+                    }
+                    task('Step 1', ()=>{
+                        task('Step 2', ()=>{
+                            task('Step 3', ()=>{
+                                task('Step 4', ()=>{
+                                    .............
+                                    task('Steps 100', ()=>{
+                                        console.log('100 Steps completed');
+                                    });
+                                });
+                            });
+                        });
+                    });
+                </code>
+            </pre>
+                <div class="callback-hell">
+                    <p>This nested structure is often called "callback hell" or
+                        "pyramid of doom" because it becomes difficult to read
+                        and maintain.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+
+    // Basic Callback Function Example
+    function greet(name, callback) {
+                        console.log('Hello ' + name);
+                        callback();
+                    }
+                    function sayGoodbye() {
+                        console.log('Goodbye!');
+                    }
+                    greet('Sameer', sayGoodbye);
+
+
+
+    
+    // Callback Hell Example
+    function task(name, callback){
+        setTimeout(()=>{
+            console.log(name);
+            callback();
+        }, 1000);
+    }
+
+    task('Step 1', ()=>{
+        task('Step 2', ()=>{
+            task('Step 3', ()=>{
+                task('Step 4', ()=>{
+                    // .............
+                    task('Step 100', ()=>{
+                        console.log('100 Steps completed');
+                    });
+                });
+            });
+        });
+    });
+        </script>
+    </body>
+</html>

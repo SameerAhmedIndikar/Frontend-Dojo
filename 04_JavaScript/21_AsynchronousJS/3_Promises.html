@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Promises in Asynchronous JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 20px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #4a90e2;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .promise-states {
+            background: #e8f5e8;
+            border-left: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Promises in Asynchronous JavaScript</h1>
+
+      <div class="section">
+        <h2>What is a Promise?</h2>
+        <p>A Promise is an object representing the eventual completion or
+          failure of an asynchronous operation. It allows you to handle
+          asynchronous operations more elegantly than callbacks, avoiding
+          callback hell.</p>
+        <p>Promises have three states: pending, fulfilled, and rejected. Once a
+          promise is fulfilled or rejected, it cannot change its state.</p>
+        <div class="promise-states">
+          <strong>Promise States:</strong>
+          <ul>
+            <li><strong>Pending:</strong> Initial state, neither fulfilled nor
+              rejected.</li>
+            <li><strong>Fulfilled:</strong> Operation completed
+              successfully.</li>
+            <li><strong>Rejected:</strong> Operation failed.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Basic Promise Example</h2>
+        <pre><code>
+              let myPromise = new Promise((resolve, reject) =&gt; {
+                  let success = true; // Simulate success or failure
+                  if (success) {
+                      resolve("Promise resolved successfully!");
+                  } else {
+                      reject("Promise rejected.");
+                  }
+              });
+              //Promise handler
+              myPromise.then((message) =&gt; {
+                  console.log(message);
+              }).catch((error) =&gt; {
+                  console.error(error);
+              });
+        </div>
+
+        <div class="section">
+            <h2>Promise Chaining Example</h2>
+            <pre>
+              <code>
+                
+             new Promise((resolve, reject) => {
+               resolve(2);  // starting value
+             })
+             .then(num => {
+              console.log(num); // 2
+               return num * 2;   // pass 4 to next
+             })
+             .then(num => {
+               console.log(num); // 4
+               return num * 2;   // pass 8 to next
+             })
+             .then(num => {
+               console.log(num); // 8
+             });
+
+              </code>
+            </pre>
+      </div>
+    </div>
+
+    <script>
+      // Basic Promise Example
+      let myPromise = new Promise((resolve, reject) => {
+          let success = true; // Simulate success or failure
+          setTimeout(() => {
+              if (success) {
+                  resolve("Task completed successfully!");
+              } else {
+                  reject("Task failed.");
+              }
+          }, 2000);
+      });
+      //Promise handler
+      myPromise.then((message) => {
+          console.log(message);
+      }).catch((error) => {
+          console.error(error);
+      });
+
+
+
+
+      // Promise Chaining Example
+      new Promise((resolve, reject) => {
+  resolve(2);  // starting value
+})
+.then(num => {
+  console.log(num); // 2
+  return num * 2;   // pass 4 to next
+})
+.then(num => {
+  console.log(num); // 4
+  return num * 2;   // pass 8 to next
+})
+.then(num => {
+  console.log(num); // 8
+});
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Portfolio</title>
+</head>
+<body>
+  <header>
+    <h1>Sameer's Portfolio</h1>
+    <nav>
+      <a href="#about">About</a> |
+      <a href="#skills">Skills</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#gallery">Gallery</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello! I'm <mark>Sameer</mark>, an aspiring web developer. I love <strong>coding</strong>, <em>designing</em>, and problem-solving.</p>
+      <figure>
+        <img src="profile.jpg" alt="Profile Photo" width="150">
+        <figcaption>This is me!</figcaption>
+      </figure>
+    </section>
+    
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+
+      <table border="1">
+        <caption>Proficiency Level</caption>
+        <thead>
+          <tr>
+            <th>Skill</th>
+            <th>Level</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>HTML</td>
+            <td>Expert</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>Advanced</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>Simple Calculator</h3>
+        <p>A pure HTML/CSS/JS calculator app.</p>
+      </article>
+      <article>
+        <h3>Personal Blog</h3>
+        <p>An ongoing blog built from scratch.</p>
+      </article>
+    </section>
+    
+    <aside>
+      <section>
+        <h4>Achievements</h4>
+        <ol>
+          <li>Winner, Coding Contest 2024</li>
+          <li>Best Design Award 2023</li>
+        </ol>
+      </section>
+    </aside>
+    
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <video width="300" controls poster="video-thumb.jpg">
+        <source src="sample-video.mp4" type="video/mp4">
+      </video>
+      <audio controls>
+        <source src="sample-audio.mp3" type="audio/mp3">
+      </audio>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <fieldset>
+          <legend>Send a Message</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" cols="40" required></textarea>
+          
+          <input type="submit" value="Send">
+        </fieldset>
+      </form>
+    </section>
+  </main>
+ 
+  <footer>
+    <address>
+      Contact: <a href="mailto:sam.ind@example.com">sam.ind@example.com</a> | Phone: <a href="tel:+1234567890">+1 234 567 890</a>
+    </address>
+    <p>&copy; <time datetime="2025-08-30">2025</time> Sameer. All rights reserved.</p>
+  </footer>
+</body>
+</html>

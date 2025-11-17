@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abstraction in JavaScript</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    pre {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Abstraction in JavaScript</h1>
+    <p>Abstraction is the concept of hiding the complex implementation details
+      and showing only the essential features of an object. It helps in reducing
+      complexity and allows the user to interact with the object at a higher
+      level.</p>
+
+    <h2>Types of Abstraction</h2>
+    <p>Open the browser console to see the output of the following abstraction
+      examples.</p>
+
+    <script>
+    // 1. Using Private Fields
+    class CoffeeMachine{
+      #waterAmount = 0; // private field
+      addWater(amount){
+        if(amount > 0){
+          this.#waterAmount = amount;
+        } else{
+          console.log("Amount must be positive");
+        }    
+        }
+        makeCoffee(){
+          if(this.#waterAmount > 0){
+            console.log(`Making coffee with ${this.#waterAmount}ml of water`);
+          } else{
+            console.log("Please add water first");
+          }
+        }
+    }
+
+    const Cof = new CoffeeMachine();
+    Cof.addWater(200);
+    console.log("Using Private Fields:");
+    Cof.makeCoffee();
+    // Cof.#waterAmount = 300; // Error: Private field '#waterAmount' must be declared in an enclosing class
+    // console.log(Cof.#waterAmount); //Error
+    
+
+
+    // 2. Using Getters and Setters
+    class Employee {
+      constructor(name, salary) {
+        this._name = name;
+        this._salary = salary;
+      }
+
+      get salary() {
+        return this._salary;
+      }
+
+      set salary(newSalary) {
+        if (newSalary > 0) {
+          this._salary = newSalary;
+          console.log(`Salary updated to $${newSalary}`);
+        }
+      }
+    }
+
+    const emp = new Employee('John', 50000);
+    console.log('\nUsing Getters and Setters:');
+    console.log(`Salary: $${emp.salary}`);
+    emp.salary = 55000;
+    console.log(`Salary: $${emp.salary}`);
+  </script>
+  </body>
+</html>

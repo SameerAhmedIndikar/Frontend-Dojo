@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Puzzle Game - Project Blueprint</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #f5f5f5;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #ffcc00;
+    }
+    .section {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+    }
+    ul {
+      margin-left: 20px;
+    }
+    code {
+      background: #333;
+      color: #00ff99;
+      padding: 2px 6px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧩 DOM Puzzle Game – Project Blueprint</h1>
+
+  <div class="section">
+    <h2>🎯 Project Goal</h2>
+    <p>
+      Build a <strong>puzzle game</strong> using HTML, CSS, and JavaScript DOM. 
+      The game breaks an image or text into tiles, shuffles them, and lets the user 
+      <em>drag & drop</em> pieces into correct positions. The DOM checks correctness 
+      and shows a <strong>“🎉 Puzzle Solved”</strong> message when completed.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>🛠 Features</h2>
+    <ul>
+      <li>Image or text is split into smaller tiles.</li>
+      <li>Tiles are shuffled randomly on page load.</li>
+      <li>Drag & Drop mechanics:
+        <code>dragstart</code>, <code>dragover</code>, <code>drop</code>.
+      </li>
+      <li>Check if puzzle is solved after each move.</li>
+      <li>Optional: timer ⏱️, reset button 🔄, difficulty levels.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>⚙️ Steps to Build</h2>
+    <ol>
+      <li><strong>HTML Setup</strong>: create puzzle board (<code>div</code> container).</li>
+      <li><strong>CSS Styling</strong>: grid layout, tile styling, background positioning.</li>
+      <li><strong>JavaScript (DOM)</strong>:
+        <ul>
+          <li>Split image/text into parts.</li>
+          <li>Shuffle parts randomly.</li>
+          <li>Add drag & drop event listeners.</li>
+          <li>Swap tiles in DOM when dropped.</li>
+          <li>Check correct order after every move.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>🖼 Example Use Cases</h2>
+    <h3>Image Puzzle (3x3)</h3>
+    <ul>
+      <li>Image split into 9 squares.</li>
+      <li>Tiles shuffled randomly.</li>
+      <li>User drags tiles to reorder them.</li>
+      <li>DOM checks order → shows 🎉 message when solved.</li>
+    </ul>
+    
+    <h3>Text Puzzle ("HELLO")</h3>
+    <ul>
+      <li>Letters shuffled (O-L-E-H-L).</li>
+      <li>User drags letters into correct order.</li>
+      <li>DOM detects when it becomes "HELLO".</li>
+    </ul>
+  </div>
+
+</body>
+</html>

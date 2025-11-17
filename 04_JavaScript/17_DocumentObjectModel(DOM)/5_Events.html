@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+  </head>
+  <body>
+    <hr>
+    <h1>Events in Js</h1>
+    <h2>There are mainly 3 types of events</h2>
+    <hr>
+
+    <h1>1.Inline Event</h1>
+    <button onclick="alert('Hi')">Click Me</button>
+    <hr>
+
+    <h1>2.Js property Method</h1>
+    <button id="btn">
+      Click Me!
+    </button>
+
+    <script>
+    let btn = document.getElementById('btn');
+    btn.onclick = function() {
+      alert('Hello from Js property method');
+    }
+  </script>
+    <hr>
+
+    <h1>3.Add Event Listener</h1>
+    <button id="bttn">Click Me!</button>
+
+    <script>
+    let bttn= document.getElementById('bttn');
+    bttn.addEventListener("click", function() {
+      alert('Hello from add event listener');
+    });
+  </script>
+    <hr>
+
+    <h1>Some of the Event Concepts</h1>
+
+    <h2>Event Object</h2>
+    <input type="text" id="input" placeholder="Enter Your Name">
+    <script> 
+  document.getElementById('input').addEventListener('keydown', 
+  function(event) {
+    console.log("key pressed "+event.key);
+  });
+</script>
+    <hr>
+
+    <h2>Event Bubbling</h2>
+
+    <div style="height: 150px;width: 150px;background-color: aqua;" id="parent">
+      <button id="child">
+        Click Me!!
+      </button>
+    </div>
+
+    <script>
+  document.getElementById('parent').addEventListener('click', function() {
+    alert('Parent Clicked');
+  });
+
+  document.getElementById('clid').addEventListener('click',function(){
+    alert('Child Clicked');
+  })
+</script>
+
+    <hr>
+
+    <h2>Event Capturing</h2>
+
+    <div style="height: 150px;width: 150px;background-color: rgb(230, 170, 7);"
+      id="parent1">
+      <button id="child1">
+        Click Me!!
+      </button>
+    </div>
+
+    <script> 
+    document.getElementById('parent1').addEventListener('click', function() {
+      alert('Parent Clicked');
+    },);
+
+    document.getElementById('child1').addEventListener('click',function(event){
+      alert('Child Clicked');
+      event.stopPropagation();
+    })
+
+
+
+    </script>
+  </body>
+</html>

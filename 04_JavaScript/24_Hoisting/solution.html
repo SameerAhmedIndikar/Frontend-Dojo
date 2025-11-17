@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hoisting</title>
+</head>
+<body>
+  <h1>Welcome to Hoisting</h1>
+
+  <script>
+    // Hoisting with var
+    console.log("Hoisting with var:");
+    console.log(x); // undefined due to hoisting
+    var x = 5;
+    console.log(x); // 5
+    // Behind the scenes, JavaScript interprets the above code as:
+    // var x;
+    // console.log(x); // undefined
+    // x = 5;
+    // console.log(x); // 5
+
+
+    // ---------------------------------------------------------
+    // Hoisting with let and const
+    console.log("Hoisting with let and const:");
+    // console.log(y); // ReferenceError: Cannot access 'y' before initialization
+    let y = 10; 
+    console.log(y); // 10
+
+    // ---------------------------------------------------------
+    // Hoisting with named function
+    console.log("Hoisting with named function:");
+    greet(); // Works due to hoisting
+    function greet() {
+      console.log("Hello, World!");
+    }
+    greet(); // Works here too
+    // Behind the scenes, JavaScript interprets the above code as:
+    // function greet() {
+    //   console.log("Hello, World!");
+    // }
+    // greet(); // Works here too
+
+
+    // ---------------------------------------------------------
+    // Hoisting with anonymous function 
+    console.log("Hoisting with anonymous function:");
+    // sayHello(); // TypeError: sayHello is not a function
+    var sayHello = function() {
+      console.log("Hello from anonymous function!");
+    };  
+    sayHello(); // Works here
+    // Behind the scenes, JavaScript interprets the above code as:
+    // var sayHello;
+    // sayHello(); // TypeError: sayHello is not a function
+    // sayHello = function() {
+    //   console.log("Hello from anonymous function!");
+    // }; 
+    // sayHello(); // Works here
+
+  </script>
+</body>
+</html>

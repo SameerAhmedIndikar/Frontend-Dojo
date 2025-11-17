@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object-Oriented Programming in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul {
+      background-color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    pre {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: 'Courier New', monospace;
+    }
+  </style>
+</head>
+<body>
+  <h1>Object-Oriented Programming (OOP) in JavaScript</h1>
+  <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data and code. In JavaScript, OOP is prototype-based, but since ES6, it supports class syntax for better structure. OOP helps in organizing code, making it more modular, reusable, and easier to maintain.</p>
+  <h2>Key Concepts</h2>
+  <ul>
+    <li><strong>Objects:</strong> Instances that encapsulate data (properties) and behavior (methods).</li>
+    <li><strong>Classes:</strong> Blueprints for creating objects. Introduced in ES6 for syntactic sugar over prototypes.</li>
+    <li><strong>Inheritance:</strong> Mechanism where one class can inherit properties and methods from another.</li>
+    <li><strong>Encapsulation:</strong> Bundling data and methods that operate on the data within a single unit (object).</li>
+    <li><strong>Polymorphism:</strong> Ability of different objects to respond to the same method call in different ways.</li>
+  </ul>
+
+  <h2>Why is OOP Important in JavaScript?</h2>
+  <p>OOP in JavaScript allows developers to build complex applications by modeling real-world entities as objects. It promotes code reusability, scalability, and maintainability. With the introduction of classes in ES6, JavaScript OOP has become more intuitive for developers coming from other languages.</p>
+
+  <h2>Basic Example</h2>
+  <p>Here's a simple example of a class in JavaScript:</p>
+  <pre><code>
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+const person1 = new Person('Alice', 30);
+person1.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+  </code></pre>
+
+  <h2>Pillars of OOP</h2>
+  <p>The four main pillars of OOP are:</p>
+  <ul>
+    <li>Encapsulation</li>
+    <li>Abstraction</li>
+    <li>Inheritance</li>
+    <li>Polymorphism</li>
+  </ul>
+</body>
+</html>

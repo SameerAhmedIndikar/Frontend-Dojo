@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strings</title>
+</head>
+<body>
+  <h1>JavaScript Strings Concepts and Methods</h1>
+
+  <script>
+    // String creation
+    let str1 = "Hello World"; // String literal
+    console.log("String:", str1);
+
+    // String properties
+    console.log("Length:", str1.length);
+
+    // String concatenation
+    let firstName = "John";
+    let lastName = "Doe";
+    let fullName = firstName.concat(" ", lastName);
+    console.log("Concatenation:", fullName);
+
+    // String methods
+    console.log("Uppercase:", str1.toUpperCase());
+    console.log("Lowercase:", str1.toLowerCase());
+    console.log("Slice (1,5):", str1.slice(1, 5));
+    console.log("Replace 'World' with 'Universe':", str1.replace('World', 'Universe'));
+    console.log("Trim '  hello  ':", '  hello  '.trim());
+  </script>
+</body>
+</html>

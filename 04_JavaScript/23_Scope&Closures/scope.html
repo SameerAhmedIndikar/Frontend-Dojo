@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+  </head>
+  <body>
+    <h1>Welcome to Scopes in JavaScript</h1>
+
+    <script>
+  // ---------------------------------------------------------
+  // Global scope
+    console.log("Global Scope:");
+    let name = "Sameer";
+    function greet() {
+  console.log("Hello " + name);  
+} 
+greet();
+console.log(name); // Accessible here
+
+// ---------------------------------------------------------
+// Local(function) scope
+function hello(){
+  let message = "Hello Sameer";
+  console.log(message); // Accessible here
+}
+hello();
+// console.log(message); // Not accessible here, will throw an error
+
+// ---------------------------------------------------------
+// Block scope
+if (true) {
+  let blockVar = "I am inside a block";
+  console.log(blockVar); // Accessible here
+}
+console.log(blockVar); // Not accessible here, will throw an error
+
+
+
+</script>
+  </body>
+</html>

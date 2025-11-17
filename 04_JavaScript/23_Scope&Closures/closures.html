@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Closures</title>
+</head>
+<body>
+  
+  <h1>Understanding Closures in JavaScript</h1>
+  <p>A closure is a function that retains access to its lexical scope, even when the function is executed outside that scope. This allows the inner function to remember the environment in which it was created.</p>
+
+  <script>
+  // Closure Example
+  function outer(){
+    let count = 0; // count is a private variable
+    return function inner(){
+      count++;
+      console.log("Count: " + count);
+    }
+  }
+  const counter = outer();
+  counter(); // Count: 1
+  counter(); // Count: 2
+  counter(); // Count: 3
+  // count is not accessible directly
+  // console.log(count); // Uncaught ReferenceError: count is not defined
+  </script>
+
+</body>
+</html>

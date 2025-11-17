@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+  <h1>Functions in JavaScript</h1>
+  <p>A function is a block of code designed to perform a particular task. It can take inputs (parameters) and return outputs.</p>
+
+  <h2>Parameters and Arguments</h2>
+  <p><strong>Parameters</strong> are placeholders in the function definition.</p>
+  <p><strong>Arguments</strong> are the actual values passed to the function when calling it.</p>
+
+  <h2>Types of Functions</h2>
+
+  <h3>1. Named Function</h3>
+  <p>Declared with a name using the 'function' keyword.</p>
+
+  <h3>2. Anonymous Function</h3>
+  <p>A function without a name, often assigned to a variable.</p>
+
+  <h3>3. Arrow Function</h3>
+  <p>A shorter syntax for functions, using '=>'.</p>
+
+  <script>
+    // Example: parameter 'name', argument 'Alice'
+    function greet(name) {
+      return "Hello " + name;
+    }
+    console.log(greet("Alice")); // Output: Hello Alice
+
+    // 1. Named Function
+    function add(a, b) {
+      return a + b;
+    }
+    console.log(add(2, 3)); // Output: 5
+
+    // 2. Anonymous Function
+    let multiply = function(a, b) {
+      return a * b;
+    };
+    console.log(multiply(4, 5)); // Output: 20
+
+    // 3. Arrow Function
+    let subtract = (a, b) => a - b;
+    console.log(subtract(10, 3)); // Output: 7
+  </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Async/Await Weather App</title>
+  <style>
+    /* ===== Global Styling ===== */
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    h1 {
+      color: #ffcc00;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #00e0ff;
+      border-bottom: 2px solid #333;
+      padding-bottom: 5px;
+      margin-top: 25px;
+    }
+
+    p, li {
+      font-size: 20px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+    }
+
+    /* ===== Card Styling for Sections ===== */
+    section {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      max-width: 800px;
+    }
+
+    /* ===== Code Highlighting ===== */
+    code {
+      background: #222;
+      color: #00ff88;
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+    }
+
+    /* ===== Hover effect ===== */
+    section:hover {
+      transform: scale(1.02);
+      transition: 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.8);
+    }
+  </style>
+</head>
+<body>
+  <h1>🌦 Async/Await Weather App</h1>
+
+  <section>
+    <h2>📌 Project Description</h2>
+    <p>
+      This project will fetch real-time weather data for any city using an external API.  
+      The user types the city name, clicks a button, and the app shows the weather.  
+      All API calls and data handling will use <b>async/await</b> for clean, readable code.
+    </p>
+  </section>
+
+  <section>
+    <h2>✨ Features</h2>
+    <ul>
+      <li>Search weather by city name</li>
+      <li>Uses async/await for fetching data</li>
+      <li>Error handling with try/catch (e.g., wrong city name)</li>
+      <li>Displays temperature, condition, and an icon</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🛠 Concepts Covered</h2>
+    <ol>
+      <li>Using <code>fetch()</code> with async/await</li>
+      <li>Handling errors with <code>try...catch</code></li>
+      <li>DOM manipulation (show results dynamically)</li>
+      <li>Clean UI with CSS</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>📂 How We Will Build It</h2>
+    <p>
+      1. Create an input box + button to enter city name.<br>
+      2. When the button is clicked, call an async function that fetches weather data.<br>
+      3. Use <b>try...catch</b> to handle errors (e.g., invalid city).<br>
+      4. Show the results (temperature, description, and weather icon) in a card.<br>
+      5. Style everything with CSS for a modern look.
+    </p>
+  </section>
+</body>
+</html>

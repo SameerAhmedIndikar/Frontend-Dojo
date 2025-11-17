@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encapsulation in JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Encapsulation in JavaScript</h1>
+  <p>Encapsulation is one of the fundamental principles of Object-Oriented Programming. It refers to the bundling of data (properties) and methods (functions) that operate on the data into a single unit or class, and restricting direct access to some of the object's components. This helps protect the internal state and provides a clear interface.</p>
+
+  <h2>Examples of Encapsulation</h2>
+  <p>Open the browser console to see the output of the following encapsulation examples.</p>
+
+  <script>
+  //   // 1. Basic Encapsulation
+  //   class car{
+  //     constructor(brand,speed){
+  //       this.brand = brand;
+  //       this.speed = speed;
+  //     }
+  //     drive(){
+  //       console.log(`${this.brand} is driving at ${this.speed} km/h`);
+  //     }
+  //   }
+  //   const car1 = new car('Toyota', 120);
+  //   car1.drive(); // Toyota is driving at 120 km/h
+
+
+  //   // 2. Encapsulation with private fields (ES2022)
+  //   class BankAccount{
+  //   #balance;
+  //   constructor(owner, initialBalance){
+  //     this.owner = owner;
+  //     this.#balance = initialBalance;
+  //   }
+  //   deposit(amount){
+  //     this.#balance += amount;
+  //   }
+  //   getBalance(){
+  //     return this.#balance; 
+  //   }
+  // }
+  //   const account = new BankAccount('Sameer', 1000);
+  //   account.deposit(500);
+  //   console.log(account.getBalance()); // 1500
+  //   // console.log(account.#balance); // Error: Private field '#balance' must be declared in an enclosing class
+    
+
+    // 3. Encapsulation with getters and setters
+    class Student{
+      constructor(name){
+        this._name = name;
+      }
+      get name(){
+        return this._name.toUpperCase();
+      }
+      set name(newName){
+        this._name = newName;
+      }
+    }
+    const s1 = new Student("Ali");
+    console.log(s1.name);
+    s1.name = "Sam";
+    console.log(s1.name);
+    
+  </script>
+</body>
+</html>

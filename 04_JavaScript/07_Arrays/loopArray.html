@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>he</h1>
+
+    <script>
+    // Looping through an array using forEach
+    let laptops = ["Dell", "HP", "Apple", "Asus"];
+    console.log("Looping using forEach:");
+    laptops.forEach((laptop) => {
+      console.log("Laptop:", laptop);
+    });
+
+    // Looping through an array using for loop
+    console.log("Looping using for loop:");
+    for (let i = 0; i < laptops.length; i++) {
+      console.log(laptops[i]);
+    }
+
+    //an array using map
+    console.log("Array using map:");
+    let number = [1, 2, 3, 4, 5];
+    let doubled = number.map((num) => num * 2);
+    console.log("Original numbers:", number);
+
+    //Array using reduce
+    console.log("Array using reduce:");
+    let numbers = [1, 2, 3, 4, 5];
+    let sum = numbers.reduce((acc,num) => acc + num, 0);
+    // where acc is accumulator and num is current value
+    console.log("Sum of numbers:", sum);
+
+    // Array using filter
+    console.log("Array using filter:");
+    let nums = [1, 2, 3, 4, 5, 6];
+    let evenNumbers = nums.filter((num) => num % 2 === 0);
+    console.log("Even numbers:", evenNumbers);
+    
+
+
+
+  </script>
+  </body>
+</html>

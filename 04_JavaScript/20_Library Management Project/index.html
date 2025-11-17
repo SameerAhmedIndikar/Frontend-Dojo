@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Library OOP Project in JS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Library Management System</h1>
+
+  <!-- Description card -->
+  <section>
+    <h2>🎯 About</h2>
+    <p>This project demonstrates all four pillars of Object-Oriented Programming in JavaScript:</p>
+    <ol>
+      <li><b>Encapsulation</b> – Classes bundle data + methods.</li>
+      <li><b>Inheritance</b> – Student and Librarian extend Member.</li>
+      <li><b>Polymorphism</b> – Borrowing rules differ for Student vs Librarian.</li>
+      <li><b>Abstraction</b> – Person acts as a base class (not directly created).</li>
+    </ol>
+  </section>
+
+  <!-- Interactive UI -->
+  <section>
+    <h2>⚡ Interactive Library</h2>
+    <div>
+      <label for="memberSelect">Select Member Type:</label>
+      <select id="memberSelect">
+        <option value="student">Student (Max 2 books)</option>
+        <option value="librarian">Librarian (Unlimited books)</option>
+      </select>
+    </div>
+    <div id="availableBooks">
+      <h3>Available Books:</h3>
+      <ul id="bookList"></ul>
+    </div>
+    <div>
+      <button id="borrowBtn">Borrow Selected Book</button>
+      <button id="returnBtn">Return Selected Book</button>
+    </div>
+    <div id="borrowedBooks">
+      <h3>Your Borrowed Books:</h3>
+      <ul id="borrowedList"></ul>
+    </div>
+    <div id="message"></div>
+  </section>
+
+  <!-- Old Demo (removed as per user request) -->
+  <!-- Removed demo output section to show real-time interactive output instead -->
+
+  <script src="script.js"></script>
+</body>
+</html>

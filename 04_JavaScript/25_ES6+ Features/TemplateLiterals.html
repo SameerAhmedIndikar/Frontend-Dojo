@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+  </head>
+  <body>
+    <h1>Template Literals</h1>
+    <p>They are a new way to create strings in JavaScript.
+
+      Use backticks (`) instead of quotes (' ' or " ").
+    </p>
+
+    <h3>It allows:</h3>
+    <ol>
+      <li>String Interpolation → embed variables & expressions directly inside
+        strings.</li>
+      <li>Multi-line Strings → no need for \n.</li>
+      <li>Expression Evaluation → run JS expressions inside strings.</li>
+    </ol>
+
+    <script>
+  //  Multi-line Strings Before ES6:
+    let oldWay = "Hello\nWorld";
+    console.log(oldWay);
+  //Multi-line Strings with Template Literals:
+    let newWay = `Hello
+    World`;
+    console.log(newWay);
+
+
+    // 2. String Interpolation (Dynamic values inside strings)
+    // Before ES6:
+    let name = "Sameer";
+    let age = 25;
+    console.log("My name is " + name + " and I am " + age + " years old.");
+    // With Template Literals:
+    let named = "Sameer";
+    let ageS = 25;
+    console.log(`My name is ${named} and I am ${ageS} years old.`);
+
+</script>
+  </body>
+</html>

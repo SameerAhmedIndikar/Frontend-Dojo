@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Arrays Concepts and Methods</h1>
+
+  <script>
+    // Array creation
+    let arr1 = [1, 2, 3, 4, 5]; // Array literal
+    let arr2 = new Array(1, 2, 3, 4, 5); // Array constructor
+    console.log("Array literal:", arr1);
+    console.log("Array constructor:", arr2);
+
+    // Accessing elements
+    console.log("First element:", arr1[0]);
+    console.log("Last element:", arr1[arr1.length - 1]);
+
+    // Array properties
+    console.log("Length:", arr1.length);
+
+    // Array methods
+    // Adding elements
+    arr1.push(6);
+    console.log("After push(6):", arr1);
+    arr1.unshift(0);
+    console.log("After unshift(0):", arr1);
+
+    // Removing elements
+    arr1.pop();
+    console.log("After pop():", arr1);
+    arr1.shift();
+    console.log("After shift():", arr1);
+
+    // Slicing and splicing
+    let sliced = arr1.slice(1, 3);
+    console.log("Slice(1,3):", sliced);
+    arr1.splice(1, 2, 10, 11);
+    console.log("After splice(1,2,10,11):", arr1);
+
+    // Concatenation
+    let arr3 = [6, 7, 8];
+    let concatenated = arr1.concat(arr3);
+    console.log("Concatenated:", concatenated);
+
+    // Searching
+    console.log("Index of 3:", arr1.indexOf(3));
+    console.log("Includes 10:", arr1.includes(10));
+
+    // Iteration methods
+    console.log("forEach:");
+    arr1.forEach(function(element, index) {
+      console.log(`Index ${index}: ${element}`);
+    });
+
+    let mapped = arr1.map(function(element) {
+      return element * 2;
+    });
+    console.log("Mapped (x2):", mapped);
+
+    let filtered = arr1.filter(function(element) {
+      return element > 5;
+    });
+    console.log("Filtered (>5):", filtered);
+
+    let sum = arr1.reduce(function(acc, element) {
+      return acc + element;
+    }, 0);
+    console.log("Reduced (sum):", sum);
+  </script>
+</body>
+</html>

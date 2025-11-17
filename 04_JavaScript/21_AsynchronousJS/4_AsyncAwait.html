@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Async/Await in Asynchronous JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            margin-bottom: 30px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #4a90e2;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .async-await-benefits {
+            background: #e8f5e8;
+            border-left: 5px solid #27ae60;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Async/Await in Asynchronous JavaScript</h1>
+
+      <div class="section">
+        <h2>What is Async/Await?</h2>
+        <p>Async/Await is a syntactic sugar built on top of Promises, introduced
+          in ES2017. It allows you to write asynchronous code that looks and
+          behaves more like synchronous code, making it easier to read and
+          understand.</p>
+        <p>The 'async' keyword declares a function as asynchronous, and 'await'
+          pauses the execution of the function until the Promise is resolved or
+          rejected.</p>
+        <div class="async-await-benefits">
+          <strong>Benefits of Async/Await:</strong>
+          <ul>
+            <li>Cleaner and more readable code</li>
+            <li>Better error handling with try/catch</li>
+            <li>Sequential execution without complex chaining</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Basic Async/Await Example</h2>
+        <pre>
+              <code>
+                async function demo() {
+                  let num = 2;          // starting value
+                  console.log(num);     // 2
+                
+                  num = num * 2;
+                  console.log(num);     // 4
+                
+                  num = num * 2;
+                  console.log(num);     // 8
+                }
+                
+                demo();
+
+              </code>
+            </pre>
+      </div>
+
+      <div class="section">
+        <h2>Error Handling with Async/Await</h2>
+        <pre>
+              <code>
+                async function fetchData() {
+                  try {
+                    // simulate an error (like failed API call)
+                    throw new Error("Failed to fetch data!");
+                
+                    console.log("This line won't run if error happens");
+                  } catch (error) {
+                    console.log("❌ Error caught:", error.message);
+                  } finally {
+                    console.log("✅ Always runs (cleanup code here)");
+                  }
+                }
+                
+                fetchData();
+                
+              </code>
+            </pre>
+      </div>
+    </div>
+
+    <script>
+      // Basic Async/Await Example
+      async function demo() {
+            let num = 2;          // starting value
+            console.log(num);     // 2
+          
+            num = num * 2;
+            console.log(num);     // 4
+          
+            num = num * 2;
+            console.log(num);     // 8
+          }
+          
+          demo();
+
+
+
+
+      // Error Handling with Async/Await
+      async function fetchData() {
+  try {
+    // simulate an error (like failed API call)
+    throw new Error("Failed to fetch data!");
+
+    console.log("This line won't run if error happens");
+  } catch (error) {
+    console.log("❌ Error caught:", error.message);
+  } finally {
+    console.log("✅ Always runs (cleanup code here)");
+  }
+}
+
+fetchData();
+
+    </script>
+  </body>
+</html>

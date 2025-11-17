@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Library OOP Project in JS</title>
+    <style>
+    /* ==== General Page Styling ==== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #00e0ff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+/* Paragraphs and lists */
+p, li {
+  font-size: 16px;
+}
+ul, ol {
+  margin-left: 20px;
+}
+
+/* ==== Card-style sections ==== */
+section {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  max-width: 800px;
+}
+
+/* ==== Buttons ==== */
+button {
+  background: #ffcc00;
+  color: #111;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: #ffaa00;
+}
+
+/* ==== Code highlighting ==== */
+code {
+  background: #222;
+  color: #00ff88;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: monospace;
+}
+
+/* ==== Fancy message box ==== */
+#output {
+  background: #222;
+  color: #00ffcc;
+  font-size: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 20px;
+  white-space: pre-line;
+}
+
+  </style>
+  </head>
+  <body>
+    <h1>📚 Library Management System (OOP in JavaScript)</h1>
+    <p>
+      This project demonstrates all four pillars of Object-Oriented Programming
+      using JavaScript classes and objects.
+    </p>
+
+    <h2>🎯 Features</h2>
+    <ul>
+      <li>Add books to the library.</li>
+      <li>Register members.</li>
+      <li>Issue books to members.</li>
+      <li>Showcase OOP principles clearly.</li>
+    </ul>
+
+    <h2>🛠️ OOP Concepts Used</h2>
+    <ol>
+      <li><b>Encapsulation:</b> Each class (Book, Member, Library) has its own
+        data and methods bundled.</li>
+      <li><b>Inheritance:</b> Librarian and Student will inherit from Member (a
+        base class).</li>
+      <li><b>Polymorphism:</b> Different member types (Student vs Librarian) can
+        override how they borrow books.</li>
+      <li><b>Abstraction:</b> We will create an abstract class
+        <code>Person</code> that enforces a contract
+        (you can’t directly create a Person, only extend it).</li>
+    </ol>
+
+    <h2>🧩 How We’ll Solve It</h2>
+    <p>
+      1. Define an <b>abstract class</b> Person (with name, ID).<br>
+      2. Create <b>Member</b> (extends Person) and then <b>Student</b> +
+      <b>Librarian</b> as child classes.<br>
+      3. Create a <b>Book</b> class (title, author, availability).<br>
+      4. Create a <b>Library</b> class that stores books and manages
+      issuing/returning.<br>
+      5. Demonstrate <b>Encapsulation</b> by keeping private data safe (like
+      availability of books).<br>
+      6. Demonstrate <b>Polymorphism</b> by overriding the
+      <code>borrowBook()</code> method differently for Student and
+      Librarian.<br>
+      7. Finally, simulate the system by adding books, registering members, and
+      borrowing books.
+    </p>
+  </body>
+</html>

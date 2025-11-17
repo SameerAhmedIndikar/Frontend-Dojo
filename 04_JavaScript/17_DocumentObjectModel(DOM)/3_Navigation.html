@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM:Second Pillar</title>
+    <style>
+      .container{
+        background-color: aqua ;
+        height: 50vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .circle{        
+        margin: auto;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        align-content: center;
+        border: 2px solid black;
+        background-color: blue;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Second Pillar of DOM</h1>
+    <h2>Traversal & Navigation</h2>
+    <p>The second pillar of DOM is Traversal & Navigation. Traversal refers to
+      the process of moving through the DOM tree to access different nodes.
+      Navigation involves using properties and methods to find and select
+      specific elements within the document.</p>
+
+    <div class="container">
+      <div class="circle">c1</div>
+      <div class="circle">c2</div>
+      <div class="circle">c3</div>
+      <div class="circle">c4</div>
+    </div>
+
+    <script>
+
+      console.log("1.document.body.childNodes");
+      console.log(document.body.childNodes); 
+      console.log(document.body.childNodes[1]);
+      console.log(document.body.childNodes[1].children); 
+      console.log(document.body.childNodes[1].firstChild); 
+      console.log(document.body.childNodes[1].lastChild);
+     
+      
+      /* 
+      console.log("--------------------------------------");
+      console.log("2.document.body.childNodes[1].children");
+      console.log(document.body.childNodes[1].children);
+      console.log(document.body.childNodes[1].firstChild);
+      console.log(document.body.childNodes[1].lastChild);
+      */
+      
+
+    /*
+      console.log("------------------------------------");
+      console.log("3.document.body.firstElementChild");
+      console.log(document.body.firstElementChild);
+      console.log(document.body.firstElementChild.childNodes);
+      console.log(document.body.firstElementChild.children);
+    */
+
+    /*
+      console.log("-------------------------------------");
+      console.log("4.document.body.firstElementChild.children[2].sibling");
+      console.log(document.body.firstElementChild.children[2].nextElementSibling);
+      console.log(document.body.firstElementChild.children[2].previousElementSibling);
+      console.log(document.body.firstElementChild.children[2].nextSibling);
+      console.log(document.body.firstElementChild.children[2].nextSibling);
+     */
+      
+      
+
+
+      
+      
+      
+
+      
+
+      
+      
+      
+      
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Object-fit Example</title>
+    <style>
+    .container {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #333;
+      margin: 20px;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; /* Change this to contain, fill, none, scale-down to see different effects */
+      border: 1px solid #666;
+    }
+  </style>
+  </head>
+  <body>
+    <h2>CSS Object-fit Property Example</h2>
+    <h3>Meme</h3>
+    <div class="container">
+      <img
+        src="https://global.discourse-cdn.com/codecademy/original/5X/3/c/8/5/3c85feecb4eb52a4d69ef0891cfbc495a1da7174.png"
+        alt="Example Image" />
+    </div>
+    <p>Current object-fit: <code>cover</code></p>
+  </body>
+</html>

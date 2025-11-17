@@ -1,0 +1,110 @@
+/* Universal selector for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Container for color boxes */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Base box styling */
+.box {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for all boxes */
+.box:hover {
+    transform: scale(1.1);
+}
+
+/* ID selector for red box */
+#red-box {
+    background-color: #ff0000;
+}
+
+/* Class selector for blue boxes */
+.blue-box {
+    background-color: #0000ff;
+}
+
+/* Descendant selector for green box inside container */
+.container .green-box {
+    background-color: #00ff00;
+}
+
+/* Adjacent sibling selector */
+.box + .yellow-box {
+    background-color: #ffff00;
+    color: #333;
+}
+
+/* Attribute selector for purple box */
+[data-color="purple"] {
+    background-color: #800080;
+}
+
+/* Pseudo-class selector for orange box */
+.box:nth-child(6) {
+    background-color: #ff8c00;
+}
+
+/* Pseudo-element selector for pink box */
+.pink-box::before {
+    content: "Pink";
+    background-color: #ff69b4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.pink-box {
+    position: relative;
+    background-color: transparent;
+}
+
+/* Child selector for cyan box */
+.container > .cyan-box {
+    background-color: #00ffff;
+    color: #333;
+}
+
+/* General sibling selector */
+.blue-box ~ .magenta-box {
+    background-color: #ff00ff;
+}

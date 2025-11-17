@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation</title>
+  </head>
+  <body>
+
+    <h1>DOM Manipulation</h1>
+    <p>This is a simple example of DOM manipulation.</p>
+    <hr>
+    <h1 id="sam">Id Manipulation</h1>
+    <button
+      onclick="document.getElementById('sam').innerHTML='Heading 2'">Change
+      Text</button>
+    <hr>
+    <h1 class="one">Class Manipulation</h1>
+    <h1 class="one">Class Manipulation</h1>
+    <button
+      onclick="document.getElementsByClassName('one')[1].innerHTML ='Manipulation Completed'">Change
+      Text</button>
+    <hr>
+    <h2>Tag Manipulation</h2>
+    <h2>Tag Manipulation2</h2>
+    <button
+      onclick="document.getElementsByTagName('h2')[1].innerHTML='Mainpulated !!!'">Change
+      Text</button>
+
+    <br>
+    <hr>
+    <h1>Name Manipulation</h1>
+    <input type="text" name="user" placeholder="Enter Your Name">
+    <input type="password" name="user" placeholder="Enter Your Password">
+    <button
+      onclick="document.getElementsByName('user')[0].placeholder='Invalid Email'">Change
+      Value</button>
+    <hr>
+
+    <h1>Query Selector</h1>
+    <h2 class="query">Hello</h2>
+    <h2 class="query">Hello</h2>
+    <h2 id="qs2">Whatsapp</h2>
+    <button
+      onclick="document.querySelectorAll('.query')[0].innerHTML='Update'">Change
+      text</button>
+    <button onclick="document.querySelector('#qs2').innerHTML='Kane'">Change
+      Text</button>
+
+    <hr>
+    <h1>QuerySelectorAll</h1>
+    <h2 class="qsa">John</h2>
+    <h2 id="qs2">Cena</h2>
+    <button
+      onclick="document.querySelectorAll('.qsa')[0].innerHTML='Undertaker'">Change
+      Text</button>
+
+
+      <script>
+        document.querySelector('h1').style.color = 'red';
+      </script>
+  </body>
+</html>

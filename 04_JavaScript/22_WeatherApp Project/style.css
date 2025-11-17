@@ -1,0 +1,76 @@
+/* ===== General Styling ===== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #111;
+  color: #eee;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+        background: url("https://t4.ftcdn.net/jpg/07/24/00/11/360_F_724001193_eKGDuOZwvJoLt2zYHQQuFyyf2kQh7qEP.jpg");
+        background-size: cover;
+        
+}
+
+h1 {
+  color: #aa0000;
+  margin-bottom: 20px;
+}
+
+/* ===== Container ===== */
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+}
+
+/* ===== Input + Button ===== */
+input {
+  padding: 10px;
+  width: 65%;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: none;
+  font-size: 16px;
+}
+
+button {
+  background: #ffcc00;
+  color: #111;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+button:hover {
+  background: #ffaa00;
+}
+
+/* ===== Weather Card ===== */
+.card {
+  margin-top: 20px;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  display: none;
+}
+
+.card h2 {
+  margin: 10px 0;
+  color: #442fff;  
+}
+.card img {
+  width: 80px;
+  height: 80px;
+}
+
+#weatherResult {
+  color: #442fff;
+  background-color: #a7aa00;
+
+}
