@@ -1,5 +1,7 @@
 # 🚀 Frontend Development Repository  
-Welcome to my **Frontend Development** learning & revision hub!  
+“Welcome to the Frontend Dojo ---> the training ground where developers master the fundamentals.
+HTML, CSS, Bootstrap, and JavaScript form the core techniques taught here, just like a dojo teaches the essential moves before entering real battles.
+Perfect for beginners leveling up and seniors revising their basics with clarity.”
 This repository is designed for **beginners starting their journey** and **developers who want a quick revision** of core frontend technologies.
 
 Here you’ll find clean, structured folders covering everything from **HTML basics to JavaScript logic** — all explained in a simple and practical way.  
